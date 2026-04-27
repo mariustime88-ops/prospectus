@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFMN - Centre de Formation aux Métiers du Numérique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('votre_image_background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <span class="text-3xl font-black text-green-600 tracking-tighter">CFMN</span>
+            <div class="h-6 w-[2px] bg-gray-300 mx-2"></div>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Label OAE</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase">
+            <a href="index.html" class="hover:text-green-600 transition">Accueil</a>
+            <a href="formations-decrocheursss.html" class="hover:text-green-600 transition">Décrocheurs</a>
+            <a href="cqm.html" class="hover:text-green-600 transition">Artisans CQM</a>
+            <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
+            <a href="propos.html" class="hover:text-green-600 transition">A propos</a>
+        </div>
+
+       <a href="contact.html"> <button class="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-green-700 shadow-lg shadow-green-200 transition">REJOINDRE</button></a>
+
+        <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl">
+        <a href="index.html" class="block font-semibold text-gray-700 hover:text-green-600">Accueil</a>
+        <a href="formations-decrocheursss.html" class="block font-semibold text-gray-700 hover:text-green-600">Décrocheurs</a>
+        <a href="cqm.html" class="block font-semibold text-gray-700 hover:text-green-600">Artisans CQM</a>
+        <a href="contact.html" class="block font-semibold text-gray-700 hover:text-green-600">Contact</a>
+        <a href="propos.html" class="block font-semibold text-gray-700 hover:text-green-600">A propos</a>
+        <a href="contact.html"> <button class="w-full bg-green-600 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-green-200">REJOINDRE</button></a>
+    </div>
+</nav>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+        // Toggle (Affiche ou cache le menu)
+        mobileMenu.classList.toggle('hidden');
+        
+        // Change l'icône entre "bars" et "times" (croix)
+        if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.replace('fa-times', 'fa-bars');
+        } else {
+            menuIcon.classList.replace('fa-bars', 'fa-times');
+        }
+    });
+</script>
+
+    <header class="hero-bg h-[90vh] flex items-center justify-center text-center text-white px-6">
+        <div class="max-w-5xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Un Centre de Formation aux Métiers du Numérique <br> <span class="text-green-400">dédié aux enjeux sociétaux</span></h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto">Centre de ressources générateur de solutions et accélérateur de projets à impact à travers formation, prototypage et développement.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#decrocheurs" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl font-bold transition-all transform hover:scale-105 shadow-xl">Découvrir nos pôles</a>
+                <a href="contact.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-xl font-bold transition-all">Nous contacter</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="decrocheurs" class="py-24 container mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-4xl font-black text-gray-900 uppercase">Pôle Décrocheurs Scolaires</h2>
+            <div class="h-2 w-24 bg-green-500 mt-4"></div>
+            <p class="mt-4 text-gray-600">Formations intensives pour une réinsertion professionnelle réussie.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100 transition-all">
+                <img src="DS/3.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Informatique de Base</h3>
+                    <p class="text-sm text-gray-500 mb-4 leading-relaxed">Maîtrise de l'environnement Windows et des outils bureautiques essentiels.</p>
+                    <a href="formations-decrocheurs.html#base" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100 transition-all">
+                <img src="DS/4.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Maintenance Informatique</h3>
+                    <p class="text-sm text-gray-500 mb-4">Apprendre à diagnostiquer et réparer les pannes matérielles (Hardware).</p>
+                    <a href="formations-decrocheurs.html#maintenance" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100">
+                <img src="DS/7.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Informatique Réseau</h3>
+                    <p class="text-sm text-gray-500 mb-4">Installation et configuration de réseaux locaux et administration système.</p>
+                    <a href="formations-decrocheurs.html#reseau" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100">
+                <img src="DS/1.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Informatique Logiciel</h3>
+                    <p class="text-sm text-gray-500 mb-4">Utilisation et installation de logiciels spécialisés et systèmes d'exploitation.</p>
+                    <a href="formations-decrocheurs.html#logiciel" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100">
+                <img src="DS/5.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Design Graphique</h3>
+                    <p class="text-sm text-gray-500 mb-4">Création visuelle, logos et supports de communication avec les outils PAO.</p>
+                    <a href="formations-decrocheurs.html#design" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100">
+                <img src="DS/6.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Installation Caméra</h3>
+                    <p class="text-sm text-gray-500 mb-4">Sécurisation des espaces par la mise en place de systèmes de vidéo-surveillance.</p>
+                    <a href="formations-decrocheurs.html#camera" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100">
+                <img src="DS/8.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Développement Web</h3>
+                    <p class="text-sm text-gray-500 mb-4">Création de sites internet modernes avec HTML, CSS et CMS.</p>
+                    <a href="formations-decrocheurs.html#web" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 card-hover border border-gray-100">
+                <img src="DS/2.png" class="h-48 w-full object-cover transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Intelligence Artificielle</h3>
+                    <p class="text-sm text-gray-500 mb-4">Initiation aux outils d'IA pour booster la productivité numérique.</p>
+                    <a href="formations-decrocheurs.html#ia" class="text-green-600 font-bold text-sm inline-flex items-center group">En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cqm" class="py-24 bg-green-50">
+        <div class="container mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl font-black text-gray-900 uppercase">Pôle Artisans (CQM)</h2>
+                <div class="h-2 w-24 bg-yellow-500 mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600">Digitaliser le savoir-faire de nos artisans locaux.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 transition-all">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">Informatique de Base</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Gestion simplifiée de l'atelier, facturation et bureautique adaptée aux artisans.</p>
+                    <a href="formations-cqm.html#base-cqm" class="bg-gray-900 text-white px-6 py-2 rounded-lg text-xs font-bold hover:bg-yellow-500 transition">En savoir plus</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 transition-all border-b-4 border-yellow-500">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">Community Manager</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Apprendre à présenter ses produits (coiffure, couture, menuiserie) sur Facebook et WhatsApp.</p>
+                    <a href="formations-cqm.html#community-manager" class="bg-gray-900 text-white px-6 py-2 rounded-lg text-xs font-bold hover:bg-yellow-500 transition">En savoir plus</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 transition-all">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">Marketing Digital</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Publicité locale ciblée pour attirer de nouveaux clients vers votre atelier.</p>
+                    <a href="formations-cqm.html#marketing-digital" class="bg-gray-900 text-white px-6 py-2 rounded-lg text-xs font-bold hover:bg-yellow-500 transition">En savoir plus</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 transition-all">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">Design & Mode</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Conception visuelle de modèles et création de catalogues numériques professionnels.</p>
+                    <a href="formations-cqm.html#design-mode" class="bg-gray-900 text-white px-6 py-2 rounded-lg text-xs font-bold hover:bg-yellow-500 transition">En savoir plus</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 transition-all">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">Boutique en ligne</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Création d'un espace de vente en ligne pour vendre vos produits partout au Bénin.</p>
+                    <a href="formations-cqm.html#boutique-en-ligne" class="bg-gray-900 text-white px-6 py-2 rounded-lg text-xs font-bold hover:bg-yellow-500 transition">En savoir plus</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 transition-all">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">Intelligence Artificielle</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Utiliser l'IA pour générer des idées de modèles et répondre automatiquement aux clients.</p>
+                    <a href="formations-cqm.html#ia-cqm" class="bg-gray-900 text-white px-6 py-2 rounded-lg text-xs font-bold hover:bg-yellow-500 transition">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12">
+            <div class="col-span-1 md:col-span-1">
+                <h3 class="text-3xl font-black text-green-500 mb-6 uppercase">CFMN</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">CFMN d'innovation digitale dédié à répondre aux enjeux sociétaux à Cotonou et partout au Bénin.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="https://www.facebook.com/Marius Time" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/22946853227" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mariustime88@gmail.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Menu</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="accueil.html" class="hover:text-white transition">Formations</a></li>
+                    <li><a href="projets.html" class="hover:text-white transition">Projets Impact</a></li>
+                    <li><a href="partenariats.html" class="hover:text-white transition">Partenaires</a></li>
+                    <li><a href="propos.html" class="hover:text-white transition">À Propos</a></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-green-500"></i> Cotonou, derrière le stade GMK.</li>
+                    <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-green-500"></i> +229 01 46 85 32 27</li>
+                    <li class="flex items-center"><i class="fas fa-envelope mr-3 text-green-500"></i> mariustime88@gmail.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Newsletter</h4>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Votre email" class="bg-gray-800 border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-green-500 outline-none">
+                    <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-green-900/20 uppercase text-xs">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-gray-600 text-xs uppercase tracking-widest">
+            © 2026 CFMN Cotonou - Tous droits réservés.
+        </div>
+    </footer>
+
+</body>
+</html>

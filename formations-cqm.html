@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations Artisans CQM | CFMN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-amber-50/30 text-slate-800">
+
+    
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <span class="text-3xl font-black text-green-600 tracking-tighter">CFMN</span>
+            <div class="h-6 w-[2px] bg-gray-300 mx-2"></div>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Label OAE</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase">
+            <a href="index.html" class="hover:text-green-600 transition">Accueil</a>
+            <a href="formations-decrocheursss.html" class="hover:text-green-600 transition">Décrocheurs</a>
+            <a href="cqm.html" class="hover:text-green-600 transition">Artisans CQM</a>
+            <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
+            <a href="propos.html" class="hover:text-green-600 transition">A propos</a>
+        </div>
+
+       <a href="contact.html"> <button class="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-green-700 shadow-lg shadow-green-200 transition">REJOINDRE</button></a>
+
+        <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl">
+        <a href="index.html" class="block font-semibold text-gray-700 hover:text-green-600">Accueil</a>
+        <a href="formations-decrocheursss.html" class="block font-semibold text-gray-700 hover:text-green-600">Décrocheurs</a>
+        <a href="cqm.html" class="block font-semibold text-gray-700 hover:text-green-600">Artisans CQM</a>
+        <a href="contact.html" class="block font-semibold text-gray-700 hover:text-green-600">Contact</a>
+        <a href="propos.html" class="block font-semibold text-gray-700 hover:text-green-600">A propos</a>
+        <a href="contact.html"> <button class="w-full bg-green-600 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-green-200">REJOINDRE</button></a>
+    </div>
+</nav>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+        // Toggle (Affiche ou cache le menu)
+        mobileMenu.classList.toggle('hidden');
+        
+        // Change l'icône entre "bars" et "times" (croix)
+        if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.replace('fa-times', 'fa-bars');
+        } else {
+            menuIcon.classList.replace('fa-bars', 'fa-times');
+        }
+    });
+</script>
+
+    <header class="pt-32 pb-16 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-center">
+        <div class="container mx-auto px-6" data-aos="zoom-in">
+            <h1 class="text-4xl md:text-5xl font-black uppercase mb-4">Pôle Artisans (CQM)</h1>
+            <p class="text-amber-100 max-w-2xl mx-auto font-medium">Boostez votre métier d'artisan grâce aux outils numériques de demain.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 space-y-32">
+
+        <section id="base-cqm" class="flex flex-col md:flex-row gap-16 items-center scroll-mt-24" data-aos="fade-right">
+            <div class="md:w-1/2 relative">
+                <div class="absolute -inset-4 bg-amber-200 rounded-[3rem] rotate-3 -z-10"></div>
+                <img src="CQM/4.png" class="rounded-[2.5rem] shadow-2xl w-full h-[400px] object-cover" alt="Informatique de Base">
+            </div>
+            <div class="md:w-1/2">
+                <div class="w-16 h-1 bg-amber-500 mb-6"></div>
+                <h2 class="text-3xl font-black mb-6 text-slate-900">Informatique de Base</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Spécialement conçu pour les artisans, ce module simplifie la gestion de votre atelier. Apprenez à utiliser l'outil informatique pour votre facturation, la gestion de vos stocks et la rédaction de devis professionnels qui rassurent vos clients.
+                </p>
+                <div class="flex items-center gap-4 text-amber-700 font-bold italic">
+                    <i class="fas fa-tools text-2xl"></i>
+                    <span>"L'informatique au service de votre savoir-faire manuel."</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="community-manager" class="flex flex-col md:flex-row-reverse gap-16 items-center scroll-mt-24" data-aos="fade-left">
+            <div class="md:w-1/2 relative">
+                <div class="absolute -inset-4 bg-orange-200 rounded-[3rem] -rotate-3 -z-10"></div>
+                <img src="CQM/5.png" class="rounded-[2.5rem] shadow-2xl w-full h-[400px] object-cover" alt="Community Manager">
+            </div>
+            <div class="md:w-1/2">
+                <div class="w-16 h-1 bg-amber-500 mb-6"></div>
+                <h2 class="text-3xl font-black mb-6 text-slate-900">Community Manager</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Apprenez à présenter vos créations (coiffure, couture, menuiserie) comme un pro sur Facebook et WhatsApp. Créez une communauté fidèle et transformez vos abonnés en clients réguliers.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-white rounded-2xl shadow-sm border border-amber-100 flex items-center gap-3">
+                        <i class="fab fa-facebook text-blue-600 text-xl"></i>
+                        <span class="text-sm font-bold">Facebook Business</span>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-amber-100 flex items-center gap-3">
+                        <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                        <span class="text-sm font-bold">WhatsApp Business</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="design-mode" class="flex flex-col md:flex-row gap-16 items-center scroll-mt-24" data-aos="fade-right">
+            <div class="md:w-1/2">
+                <img src="CQM/2.png" class="rounded-[2.5rem] shadow-2xl w-full h-[400px] object-cover" alt="Design et Mode">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black mb-6 text-slate-900">Design & Mode</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Passez du croquis papier au catalogue numérique. Nous vous apprenons à créer des visuels de vos modèles et des catalogues digitaux professionnels pour valoriser vos collections auprès d'une clientèle haut de gamme.
+                </p>
+                <button onclick="window.location.href='contact.html'" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-amber-600 transition-all flex items-center gap-3">
+                    S'inscrire à ce module <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+        <section id="marketing-digital" class="flex flex-col md:flex-row gap-16 items-center scroll-mt-24" data-aos="fade-right">
+    <div class="md:w-1/2 relative">
+        <div class="absolute -inset-4 bg-orange-100 rounded-[3rem] rotate-2 -z-10"></div>
+        <img src="CQM/3.png" class="rounded-[2.5rem] shadow-2xl w-full h-[400px] object-cover" alt="Marketing Digital">
+    </div>
+    <div class="md:w-1/2">
+        <div class="w-16 h-1 bg-amber-500 mb-6"></div>
+        <h2 class="text-3xl font-black mb-6 text-slate-900">Marketing Digital</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            Ne laissez plus la chance décider de vos ventes. Apprenez à créer des publicités locales ciblées pour attirer de nouveaux clients directement dans votre atelier. Nous vous montrons comment définir votre audience pour que chaque franc investi vous rapporte des commandes concrètes.
+        </p>
+        <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 font-semibold"><i class="fas fa-bullseye text-orange-500"></i> Ciblage par quartier et ville</li>
+            <li class="flex items-center gap-3 font-semibold"><i class="fas fa-chart-line text-orange-500"></i> Analyse des résultats de vente</li>
+        </ul>
+    </div>
+</section>
+
+<section id="boutique-en-ligne" class="flex flex-col md:flex-row-reverse gap-16 items-center scroll-mt-24" data-aos="fade-left">
+    <div class="md:w-1/2 relative">
+        <div class="absolute -inset-4 bg-amber-200 rounded-[3rem] -rotate-2 -z-10"></div>
+        <img src="CQM/1.png" class="rounded-[2.5rem] shadow-2xl w-full h-[400px] object-cover" alt="Boutique en ligne">
+    </div>
+    <div class="md:w-1/2">
+        <div class="w-16 h-1 bg-amber-500 mb-6"></div>
+        <h2 class="text-3xl font-black mb-6 text-slate-900">Boutique en ligne</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            Votre atelier n'a plus de frontières. Apprenez à créer votre propre espace de vente en ligne pour exposer et vendre vos produits partout au Bénin, 24h/24. Nous vous accompagnons dans la mise en place d'un catalogue digital attractif et facile à gérer.
+        </p>
+        <div class="bg-amber-100 p-6 rounded-2xl border-l-4 border-amber-500">
+            <p class="text-amber-900 font-bold mb-2 uppercase text-xs">Objectif :</p>
+            <p class="text-amber-800 italic">"Passer d'une vente locale à une visibilité nationale grâce à un catalogue e-commerce simplifié."</p>
+        </div>
+    </div>
+</section>
+
+        <section id="ia-cqm" class="flex flex-col md:flex-row-reverse gap-16 items-center scroll-mt-24" data-aos="fade-left">
+            <div class="md:w-1/2 bg-slate-900 p-8 rounded-[3rem] text-white flex flex-col justify-center min-h-[300px]">
+                <div class="text-5xl mb-6 text-amber-400"><i class="fas fa-robot animate-bounce"></i></div>
+                <h3 class="text-2xl font-bold mb-4">L'IA pour vos idées</h3>
+                <p class="text-slate-400">Utilisez l'IA pour générer instantanément des idées de modèles et répondre automatiquement à vos clients même quand vous travaillez à l'atelier.</p>
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black mb-6 text-slate-900">Intelligence Artificielle</h2>
+                <p class="text-lg text-gray-600">L'IA n'est pas que pour les ingénieurs. Apprenez à demander à l'ordinateur de créer des styles de coiffure ou des plans de meubles pour inspirer votre travail quotidien.</p>
+            </div>
+        </section>
+
+    </main>
+
+     <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12">
+            <div class="col-span-1 md:col-span-1">
+                <h3 class="text-3xl font-black text-green-500 mb-6 uppercase">CFMN</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">CFMN d'innovation digitale dédié à répondre aux enjeux sociétaux à Cotonou et partout au Bénin.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="https://www.facebook.com/Marius Time" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/22946853227" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mariustime88@gmail.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Menu</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="accueil.html" class="hover:text-white transition">Formations</a></li>
+                    <li><a href="projets.html" class="hover:text-white transition">Projets Impact</a></li>
+                    <li><a href="partenariats.html" class="hover:text-white transition">Partenaires</a></li>
+                    <li><a href="propos.html" class="hover:text-white transition">À Propos</a></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-green-500"></i> Cotonou, derrière le stade GMK.</li>
+                    <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-green-500"></i> +229 01 46 85 32 27</li>
+                    <li class="flex items-center"><i class="fas fa-envelope mr-3 text-green-500"></i> mariustime88@gmail.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Newsletter</h4>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Votre email" class="bg-gray-800 border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-green-500 outline-none">
+                    <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-green-900/20 uppercase text-xs">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-gray-600 text-xs uppercase tracking-widest">
+            © 2026 CFMN Cotonou - Tous droits réservés.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

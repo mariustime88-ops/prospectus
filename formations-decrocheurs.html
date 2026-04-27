@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails des Formations - Décrocheurs | CFMN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <span class="text-3xl font-black text-green-600 tracking-tighter">CFMN</span>
+            <div class="h-6 w-[2px] bg-gray-300 mx-2"></div>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Label OAE</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase">
+            <a href="index.html" class="hover:text-green-600 transition">Accueil</a>
+            <a href="formations-decrocheursss.html" class="hover:text-green-600 transition">Décrocheurs</a>
+            <a href="cqm.html" class="hover:text-green-600 transition">Artisans CQM</a>
+            <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
+            <a href="propos.html" class="hover:text-green-600 transition">A propos</a>
+        </div>
+
+       <a href="contact.html"> <button class="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-green-700 shadow-lg shadow-green-200 transition">REJOINDRE</button></a>
+
+        <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl">
+        <a href="index.html" class="block font-semibold text-gray-700 hover:text-green-600">Accueil</a>
+        <a href="formations-decrocheursss.html" class="block font-semibold text-gray-700 hover:text-green-600">Décrocheurs</a>
+        <a href="cqm.html" class="block font-semibold text-gray-700 hover:text-green-600">Artisans CQM</a>
+        <a href="contact.html" class="block font-semibold text-gray-700 hover:text-green-600">Contact</a>
+        <a href="propos.html" class="block font-semibold text-gray-700 hover:text-green-600">A propos</a>
+        <a href="contact.html"> <button class="w-full bg-green-600 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-green-200">REJOINDRE</button></a>
+    </div>
+</nav>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+        // Toggle (Affiche ou cache le menu)
+        mobileMenu.classList.toggle('hidden');
+        
+        // Change l'icône entre "bars" et "times" (croix)
+        if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.replace('fa-times', 'fa-bars');
+        } else {
+            menuIcon.classList.replace('fa-bars', 'fa-times');
+        }
+    });
+</script>
+
+    <header class="pt-32 pb-16 bg-green-600 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-black uppercase mb-4" data-aos="zoom-in">Pôle Décrocheurs Scolaires</h1>
+            <p class="text-green-100 max-w-2xl mx-auto">Découvrez en détail nos programmes conçus pour transformer votre passion pour le numérique en une carrière solide.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 space-y-24">
+
+        <section id="base" class="flex flex-col md:flex-row gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/3.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="Informatique de base">
+            </div>
+            <div class="md:w-1/2">
+                <span class="text-green-600 font-bold tracking-widest uppercase text-sm">Formation 01</span>
+                <h2 class="text-3xl font-black mb-6">Informatique de Base</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Cette formation est le socle de votre avenir numérique. Nous ne nous contentons pas de vous montrer comment allumer un ordinateur. Vous apprendrez à maîtriser l'écosystème Windows, la gestion de fichiers complexe, et la suite bureautique (Word, Excel, PowerPoint) pour devenir autonome en entreprise.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Maîtrise du clavier et raccourcis</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Internet et sécurité des mails</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="maintenance" class="flex flex-col md:flex-row-reverse gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/4.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="Maintenance">
+            </div>
+            <div class="md:w-1/2">
+                <span class="text-green-600 font-bold tracking-widest uppercase text-sm">Formation 02</span>
+                <h2 class="text-3xl font-black mb-6">Maintenance Informatique</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Devenez le "médecin" des ordinateurs. Ce module pratique vous apprend à démonter un PC, identifier les composants (RAM, Disque dur, Processeur) et diagnostiquer les pannes. Vous saurez installer des systèmes d'exploitation et optimiser les performances des machines.
+                </p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-green-500 italic">
+                    "Une formation 100% pratique pour ouvrir votre propre atelier de réparation."
+                </div>
+            </div>
+        </section>
+
+        <section id="reseau" class="flex flex-col md:flex-row gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/7.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="Réseau">
+            </div>
+            <div class="md:w-1/2">
+                <span class="text-green-600 font-bold tracking-widest uppercase text-sm">Formation 03</span>
+                <h2 class="text-3xl font-black mb-6">Informatique Réseau</h2>
+                <p class="text-gray-600 mb-6">Apprenez à connecter le monde. De la configuration des routeurs Wi-Fi au sertissage des câbles RJ45, vous maîtriserez la création de réseaux locaux pour les bureaux et entreprises.</p>
+                <div class="grid grid-cols-2 gap-4 text-sm font-bold">
+                    <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-network-wired text-green-500 mr-2"></i> Adressage IP</div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-shield-alt text-green-500 mr-2"></i> Sécurité Réseau</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="logiciel" class="flex flex-col md:flex-row-reverse gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/1.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="Logiciel">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black mb-6">Informatique Logiciel</h2>
+                <p class="text-gray-600">Installation, configuration et dépannage des environnements logiciels. Maîtrisez les drivers, les antivirus et les logiciels métiers indispensables au bon fonctionnement d'une entreprise numérique.</p>
+            </div>
+        </section>
+
+        <section id="design" class="flex flex-col md:flex-row gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/5.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="Design">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black mb-6">Design Graphique</h2>
+                <p class="text-gray-600 mb-6">L'art de communiquer par l'image. Apprenez à créer des logos, des affiches publicitaires et des visuels pour les réseaux sociaux en utilisant les outils professionnels de la PAO.</p>
+                <div class="flex gap-4">
+                    <span class="bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-xs font-bold">Photoshop</span>
+                    <span class="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-xs font-bold">Canva Pro</span>
+                    <span class="bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-xs font-bold">Illustrator</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="camera" class="flex flex-col md:flex-row-reverse gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/6.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="Caméra">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black mb-6">Installation Caméra</h2>
+                <p class="text-gray-600">Un métier d'avenir. Apprenez à installer des systèmes de vidéo-surveillance IP et analogiques, à configurer les enregistreurs (DVR/NVR) et à permettre le visionnage à distance sur smartphone.</p>
+            </div>
+        </section>
+
+        <section id="web" class="flex flex-col md:flex-row gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/8.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="Web">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black mb-6">Développement Web</h2>
+                <p class="text-gray-600">Créez des sites internet de A à Z. Ce module vous initie au code (HTML/CSS) et à l'utilisation des CMS comme WordPress pour réaliser des sites professionnels, rapides et responsives.</p>
+            </div>
+        </section>
+
+        <section id="ia" class="flex flex-col md:flex-row-reverse gap-12 items-center scroll-mt-24" data-aos="fade-up">
+            <div class="md:w-1/2">
+                <img src="DS/2.png" class="rounded-[2rem] shadow-2xl w-full h-80 object-cover" alt="IA">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-black mb-6 text-green-600">Intelligence Artificielle</h2>
+                <p class="text-gray-600 mb-6">Ne craignez pas l'IA, utilisez-la. Nous apprenons aux étudiants à utiliser les outils d'IA (ChatGPT, Midjourney, etc.) pour automatiser des tâches, rédiger du contenu et booster leur productivité de 300%.</p>
+            </div>
+        </section>
+
+    </main>
+
+     <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12">
+            <div class="col-span-1 md:col-span-1">
+                <h3 class="text-3xl font-black text-green-500 mb-6 uppercase">CFMN</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">CFMN d'innovation digitale dédié à répondre aux enjeux sociétaux à Cotonou et partout au Bénin.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="https://www.facebook.com/Marius Time" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/22946853227" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mariustime88@gmail.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Menu</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="accueil.html" class="hover:text-white transition">Formations</a></li>
+                    <li><a href="projets.html" class="hover:text-white transition">Projets Impact</a></li>
+                    <li><a href="partenariats.html" class="hover:text-white transition">Partenaires</a></li>
+                    <li><a href="propos.html" class="hover:text-white transition">À Propos</a></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-green-500"></i> Cotonou, derrière le stade GMK.</li>
+                    <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-green-500"></i> +229 01 46 85 32 27</li>
+                    <li class="flex items-center"><i class="fas fa-envelope mr-3 text-green-500"></i> mariustime88@gmail.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Newsletter</h4>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Votre email" class="bg-gray-800 border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-green-500 outline-none">
+                    <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-green-900/20 uppercase text-xs">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-gray-600 text-xs uppercase tracking-widest">
+            © 2026 CFMN Cotonou - Tous droits réservés.
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>

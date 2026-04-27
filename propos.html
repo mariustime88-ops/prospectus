@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFMN - Centre de Formation aux Métiers du Numérique</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <span class="text-3xl font-black text-green-600 tracking-tighter">CFMN</span>
+            <div class="h-6 w-[2px] bg-gray-300 mx-2"></div>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Label OAE</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase">
+            <a href="index.html" class="hover:text-green-600 transition">Accueil</a>
+            <a href="formations-decrocheursss.html" class="hover:text-green-600 transition">Décrocheurs</a>
+            <a href="cqm.html" class="hover:text-green-600 transition">Artisans CQM</a>
+            <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
+            <a href="propos.html" class="hover:text-green-600 transition">A propos</a>
+        </div>
+
+       <a href="contact.html"> <button class="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-green-700 shadow-lg shadow-green-200 transition">REJOINDRE</button></a>
+
+        <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 shadow-xl">
+        <a href="index.html" class="block font-semibold text-gray-700 hover:text-green-600">Accueil</a>
+        <a href="formations-decrocheursss.html" class="block font-semibold text-gray-700 hover:text-green-600">Décrocheurs</a>
+        <a href="cqm.html" class="block font-semibold text-gray-700 hover:text-green-600">Artisans CQM</a>
+        <a href="contact.html" class="block font-semibold text-gray-700 hover:text-green-600">Contact</a>
+        <a href="propos.html" class="block font-semibold text-gray-700 hover:text-green-600">A propos</a>
+        <a href="contact.html"> <button class="w-full bg-green-600 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-green-200">REJOINDRE</button></a>
+    </div>
+</nav>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+        // Toggle (Affiche ou cache le menu)
+        mobileMenu.classList.toggle('hidden');
+        
+        // Change l'icône entre "bars" et "times" (croix)
+        if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.replace('fa-times', 'fa-bars');
+        } else {
+            menuIcon.classList.replace('fa-bars', 'fa-times');
+        }
+    });
+</script>
+<section id="a-propos" class="py-20 bg-white overflow-hidden">
+    <div class="container mx-auto px-6">
+        
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">À Propos de <span class="text-green-600">CFMN</span></h2>
+            <div class="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                Une initiative née de la passion pour l'innovation numérique et l'inclusion sociale au Bénin.
+            </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center mb-24 gap-12">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800" alt="Vision CFMN" class="rounded-2xl shadow-2xl">
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <h3 class="text-3xl font-semibold text-gray-800 mb-6">Notre Objectif</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Le **CFMN** a pour mission de démocratiser l'accès aux outils numériques. Nous croyons que la technologie ne doit pas être une barrière, mais un levier de croissance pour tous : des étudiants en quête de spécialisation aux artisans désirant moderniser leur savoir-faire.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center text-gray-700">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i> Insertion professionnelle des décrocheurs.
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i> Digitalisation de l'artisanat local.
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i> Accompagnement vers l'entrepreneuriat innovant.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="zoom-in">Les Visages derrière le Projet</h3>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-green-500" data-aos="flip-left">
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl text-white font-bold bg-gradient-to-br from-green-400 to-green-700">
+                        TM
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800">TIME Marius Mahougnon</h4>
+                    <p class="text-green-600 font-medium mb-4">Co-fondateur</p>
+                    <p class="text-gray-500 italic">Étudiant en L3 Système Informatique et Logiciel à l'UPI-ONM.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-blue-500" data-aos="flip-right">
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl text-white font-bold bg-gradient-to-br from-blue-400 to-blue-700">
+                        EB
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800">Eustache Balogoun</h4>
+                    <p class="text-blue-600 font-medium mb-4">Co-fondateur</p>
+                    <p class="text-gray-500 italic">Étudiant en L3 Système Informatique et Logiciel à l'UPI-ONM.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-up-right">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">Nos Formateurs & Pratique</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Nous n'embauchons que des **experts passionnés** et des professionnels du métier. Nos professeurs allient théorie universitaire et rigueur du terrain pour garantir une montée en compétences rapide.
+                </p>
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                    <h5 class="font-bold text-green-800 mb-2 underline">Immersion Réelle :</h5>
+                    <p class="text-green-700 italic">
+                        "Exemple : Nos coiffeuses partenaires n'apprennent pas juste à coiffer. Elles pratiquent la gestion de stock, le marketing digital et le design de coiffure directement dans les salons en collaboration avec nous."
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-up-left">
+                <div class="p-6 bg-white shadow-md rounded-lg text-center border border-gray-100">
+                    <i class="fas fa-chalkboard-teacher text-3xl text-green-500 mb-3"></i>
+                    <h6 class="font-bold">Profs Experts</h6>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-lg text-center border border-gray-100">
+                    <i class="fas fa-hand-holding-heart text-3xl text-green-500 mb-3"></i>
+                    <h6 class="font-bold">Social Impact</h6>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-lg text-center border border-gray-100">
+                    <i class="fas fa-briefcase text-3xl text-green-500 mb-3"></i>
+                    <h6 class="font-bold">Pratique Directe</h6>
+                </div>
+                <div class="p-6 bg-white shadow-md rounded-lg text-center border border-gray-100">
+                    <i class="fas fa-users text-3xl text-green-500 mb-3"></i>
+                    <h6 class="font-bold">Partenariats</h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+ <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12">
+            <div class="col-span-1 md:col-span-1">
+                <h3 class="text-3xl font-black text-green-500 mb-6 uppercase">CFMN</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">CFMN d'innovation digitale dédié à répondre aux enjeux sociétaux à Cotonou et partout au Bénin.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="https://www.facebook.com/Marius Time" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/22946853227" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/mariustime88@gmail.com" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Menu</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="accueil.html" class="hover:text-white transition">Formations</a></li>
+                    <li><a href="projets.html" class="hover:text-white transition">Projets Impact</a></li>
+                    <li><a href="partenariats.html" class="hover:text-white transition">Partenaires</a></li>
+                    <li><a href="propos.html" class="hover:text-white transition">À Propos</a></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-green-500"></i> Cotonou, derrière le stade GMK.</li>
+                    <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-green-500"></i> +229 01 46 85 32 27</li>
+                    <li class="flex items-center"><i class="fas fa-envelope mr-3 text-green-500"></i> mariustime88@gmail.com</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-sm tracking-widest">Newsletter</h4>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Votre email" class="bg-gray-800 border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-green-500 outline-none">
+                    <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-green-900/20 uppercase text-xs">S'abonner</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-gray-600 text-xs uppercase tracking-widest">
+            © 2026 CFMN Cotonou - Tous droits réservés.
+        </div>
+    </footer>
+
+<script>
+    // Initialisation des animations AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-in-out',
+    });
+</script>
+
+</body>
+</html>
